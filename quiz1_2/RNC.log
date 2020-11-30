@@ -1,0 +1,31 @@
+3RR18> get RncFunction Rncid
+hget HMZ018 PrimaryScramblingCode|cId$|RoutingArea|uarfcnDl
+
+200713-02:32:05 172.22.146.243 20.0c RNC_NODE_MODEL_V_13_688_COMPLETE stopfile=/tmp/28667
+=================================================================================================================
+MO                                                      Attribute         Value
+=================================================================================================================
+RncFunction=1                                           rncId             118
+=================================================================================================================
+Total: 1 MOs
+
+
+3RR18> hget HMZ018 PrimaryScramblingCode|cId$|RoutingArea|uarfcnDl
+
+200713-02:32:05 172.22.146.243 20.0c RNC_NODE_MODEL_V_13_688_COMPLETE stopfile=/tmp/28667
+...
+=================================================================================================================
+MO                cId   primaryScramblingCode routingAreaRef                   uarfcnDl
+=================================================================================================================
+UtranCell=HMZ018A 6164  345                   LocationArea=3451,RoutingArea=18 3037    
+UtranCell=HMZ018B 6165  353                   LocationArea=3451,RoutingArea=18 3037    
+UtranCell=HMZ018C 6166  361                   LocationArea=3451,RoutingArea=18 3037    
+UtranCell=HMZ018E 39524 345                   LocationArea=3451,RoutingArea=18 3058    
+UtranCell=HMZ018F 39525 353                   LocationArea=3451,RoutingArea=18 3058    
+UtranCell=HMZ018G 39526 361                   LocationArea=3451,RoutingArea=18 3058    
+=================================================================================================================
+Total: 6 MOs
+
+Added 6 MOs to group: hget_group
+
+3RR18> 

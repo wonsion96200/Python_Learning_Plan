@@ -1,0 +1,17 @@
+lt all
+altc
+hgetc ^NRCellDU nRPCI
+hgetc ^EUtranCell physicalLayerCellId$
+hgetc ^EUtranCell endcAllowedPlmnList
+hgetc ^EUtranCell activePlmnList
+hgetc ^NRCellDU pLMNIdList
+invlrc
+invxc
+lggc -m 1d
+lgoc -m 1d
+lgjc -m 1d
+lguc
+lpr swm
+scg
+st cell|Field|Sector|Term
+cvls

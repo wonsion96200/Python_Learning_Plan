@@ -1,0 +1,29 @@
+lt all
+
+/tn/show-processing-resource
+/tn/npu-health-check 
+lpget transport= err|dis|unkn|una|abn|abo|cong|shut|zero|tru|fail|noro|hol|inva|nopo|nosa|sare|frag|reasm|blue|rtx !^0$
+lpget transport=
+mtd debug -ta dlPdcpPeBl -fun getElementInfo() -dest RTS_WAIT
+mtd debug -ta dlRlcPeBl -fun getElementInfo() -dest RTS_WAIT
+
+wait 300
+
+/tn/show-processing-resource
+/tn/npu-health-check 
+lpget transport= err|dis|unkn|una|abn|abo|cong|shut|zero|tru|fail|noro|hol|inva|nopo|nosa|sare|frag|reasm|blue|rtx !^0$
+lpget transport=
+mtd debug -ta dlPdcpPeBl -fun getElementInfo() -dest RTS_WAIT
+mtd debug -ta dlRlcPeBl -fun getElementInfo() -dest RTS_WAIT
+
+wait 300
+
+/tn/show-processing-resource
+/tn/npu-health-check 
+lpget transport= err|dis|unkn|una|abn|abo|cong|shut|zero|tru|fail|noro|hol|inva|nopo|nosa|sare|frag|reasm|blue|rtx !^0$
+lpget transport=
+mtd debug -ta dlPdcpPeBl -fun getElementInfo() -dest RTS_WAIT
+mtd debug -ta dlRlcPeBl -fun getElementInfo() -dest RTS_WAIT
+
+
+te log read

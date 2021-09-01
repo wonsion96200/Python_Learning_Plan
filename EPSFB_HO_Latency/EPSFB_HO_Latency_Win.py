@@ -15,7 +15,7 @@ def open_file():
         with open(file_path, "r") as fileRead:
             traceFlow = fileRead.readlines()
 
-        latency = [["ue_trace_id       \t", "PhaseA\t", "PhaseB\t", "PhaseC\t", "PhaseD\t", "Total"]]
+        latency = [["ue_trace_id       \t", "PhaseA\t", "PhaseB\t", "PhaseC\t", "PhaseD\t", "Total\t", "PhaseE"]]
         lineNumber = 0
         for line in traceFlow:
             if "(NGAP)  PDUSessionResourceModifyRequest:" in line:
@@ -44,7 +44,7 @@ def open_file():
                         hoRequiredTimeStamp = datetime.strptime(traceFlow[tempLineNumber].split()[1][0:15],
                                                                          "%H:%M:%S.%f")
                         # print(hoRequiredTimeStamp)
-                    elif "(NGAP)  ParsingError:" in traceFlow[tempLineNumber] and \
+                    elif "(NGAP)  HandoverCommand:" in traceFlow[tempLineNumber] and \
                             traceFlow[tempLineNumber].split()[10] == ueTraceId:
                         hoCommandTimeStamp = datetime.strptime(traceFlow[tempLineNumber].split()[1][0:15],
                                                                         "%H:%M:%S.%f")
@@ -70,12 +70,13 @@ def open_file():
                 phaseB = (hoRequiredTimeStamp - measTimeStamp).microseconds / 1000
                 phaseC = (mobilityCommandTimeStamp - hoCommandTimeStamp).microseconds / 1000
                 phaseD = (ueRelCompleteTimeStamp - ueRelCommandTimeStamp).microseconds / 1000
+                phaseE = (mobilityCommandTimeStamp - measTimeStamp).microseconds / 1000
                 # print("Phase A latency: " + str(phaseA) + " ms")
                 # print("Phase B latency: " + str(phaseB) + " ms")
                 # print("Phase C latency: " + str(phaseC) + " ms")
                 # print("Phase D latency: " + str(phaseD) + " ms")
                 latency.append(
-                    [ueTraceId + "\t", str(phaseA) + "\t", str(phaseB) + "\t", str(phaseC) + "\t", str(phaseD) + "\t", str(round(phaseA+phaseB+phaseC+phaseD, 3))])
+                    [ueTraceId + "\t", str(phaseA) + "\t", str(phaseB) + "\t", str(phaseC) + "\t", str(phaseD) + "\t", str(round(phaseA+phaseB+phaseC+phaseD, 3)) + "\t", str(phaseE)])
             lineNumber += 1
 
         showText.delete(0.0, END)
@@ -86,7 +87,7 @@ def open_file():
 
 
 applicationWindow = Tk()
-applicationWindow.title("EPSFB HO Latency Calculator V1.1")
+applicationWindow.title("EPSFB HO Latency Calculator V1.3")
 applicationWindow.resizable(0, 0)  # if height and width are resizable
 applicationWindow.geometry("850x450")  # window initial size
 

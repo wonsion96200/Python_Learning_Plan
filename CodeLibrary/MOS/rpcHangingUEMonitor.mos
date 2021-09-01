@@ -1,0 +1,3 @@
+lt all
+lhsh 000100 /rpc/nrat/ue list --cell --state --time
+lhsh 000100 /rc/nrat/ue list --cell --state --time

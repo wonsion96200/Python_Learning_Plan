@@ -1,0 +1,2 @@
+lt all
+pmxn -o csv -m 0.5  EthernetPort|cell  ifHCInUcastPkts$|pmPdcpPktReceivedDl$|pmRrcConnLevSum$

@@ -1,0 +1,3 @@
+/home/ejungwa/dcgm/E11575837HZDQwukangaotiyihao16haolou_NR_CRAN_200816_071252_CST_MSRBS-N_CXP9024418-15_R13B26_dcgm.zip
+/home/ejungwa/dcgm/E11587986LSLDouweidasha1Fdao5F_SF_210519_013446_CST_MSRBS-N_CXP9024418-15_R30C30_dcgm.zip
+/home/ejungwa/dcgm/E828299HZDQwukangaotiyihao16haolou_3DMIMO_200816_071346_CST_MSRBS-L_CXP9024418-15_R13B26_dcgm.zip

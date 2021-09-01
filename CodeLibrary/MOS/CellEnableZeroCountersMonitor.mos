@@ -1,0 +1,3 @@
+lt all
+pmx -o csv -m 4  cell  pmPdcpVolUlDrb$|pmPdcpVolUlSrb$|pmPdcpVolDlDrb$|pmPdcpVolDlSrb$|pmMacVolUl$|pmMacVolDl$|pmMacVolDlDrb$|pmRrcConnLevSum$|pmRrcConnLevelSumSa$|pmCellDowntimeAuto$
+st cell

@@ -1,0 +1,7 @@
+lt all
+hgetc ^GNBCUCPFunction= gNBId
+hgetc ^NRCellRelation nRCellRef|nRFreqRelationRef
+hgetc ^ExternalNRCellCU cellLocalId|plmnIdList|nRFrequencyRef|nRPCI|nRTAC
+hgetc ^ExternalGNBCUCPFunction gNBId|gNBIdLength|pLMNId
+hgetc ^NRFreqRelation nRFrequencyRef$
+hgetc ^NRFrequency arfcnValueNRDl|smtcDuration|smtcOffset|smtcPeriodicity|smtcScs

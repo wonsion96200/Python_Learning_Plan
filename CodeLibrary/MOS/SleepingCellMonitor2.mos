@@ -1,0 +1,2 @@
+lt all
+mtd debug -ta dlPdcpPeBl -fun getElementInfo() -dest RTS_WAIT

@@ -1,0 +1,9 @@
+lt all
+cvcu
+st cell|Field|Sector|Term
+altc
+lgjc -m 1d
+lggc -m 1d
+lgoc -m 1d
+scg
+invlrc
